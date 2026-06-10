@@ -238,6 +238,7 @@ const MapView = ({
                   longitude={marker.lng}
                   latitude={marker.lat}
                   anchor={markerAnchor || autoMarkerAnchor}
+                  style={marker.zIndex === undefined ? undefined : { zIndex: marker.zIndex }}
                   onClick={(e) => {
                     e.originalEvent.stopPropagation();
                     marker.id && handleMarkerClick(marker.id, Boolean(marker.Tooltip));
