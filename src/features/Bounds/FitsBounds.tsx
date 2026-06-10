@@ -173,11 +173,13 @@ const FitBounds = ({
       return;
     }
 
-    // Fit all bounds with padding and optional animation
+    // Fit all bounds with padding and optional animation.
+    // Only include maxZoom when defined: an explicit `maxZoom: undefined` overrides the
+    // mapbox-gl default (Math.min(zoom, undefined) -> NaN) and breaks the camera.
     map.fitBounds([bounds.getSouthWest().toArray(), bounds.getNorthEast().toArray()], {
       duration: disableAnimation ? 0 : duration,
-      maxZoom,
       padding,
+      ...(maxZoom !== undefined && { maxZoom }),
     });
   }, [map, bounds, padding, duration, disableAnimation, animationKey, fitBounds, validMarkers, featureCoords, openPopup, maxZoom]);
 
