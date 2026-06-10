@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.9.0](https://github.com/getsoren/map/compare/v1.8.18...v1.9.0) (2026-06-10)
+
+
+### ✨ Features
+
+* add maxZoom prop to FitBounds for configurable zoom levels ([3af5a76](https://github.com/getsoren/map/commit/3af5a762698a31b12ec428c6d590f14916cf9962))
 
 ### [1.8.18](https://github.com/Tracktor/map/compare/v1.8.17...v1.8.18) (2026-03-26)
 
