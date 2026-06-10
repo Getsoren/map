@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.9.1](https://github.com/getsoren/map/compare/1.9.0...1.9.1) (2026-06-10)
+
 ## [1.9.0](https://github.com/getsoren/map/compare/v1.8.18...v1.9.0) (2026-06-10)
 
 
