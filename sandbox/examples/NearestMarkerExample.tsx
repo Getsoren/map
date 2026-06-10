@@ -1,4 +1,3 @@
-import { WarningAmberRounded } from "@mui/icons-material";
 import {
   Box,
   Button,
@@ -13,6 +12,7 @@ import {
   Switch,
   Typography,
 } from "@getsoren/design-system";
+import { WarningAmberRounded } from "@mui/icons-material";
 import { useMemo, useState } from "react";
 import type { ProjectionSpecification } from "react-map-gl";
 import nearestPreCompute from "sandbox/examples/pre-compute/nearestPreCompute";

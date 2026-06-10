@@ -15,7 +15,11 @@ interface FitBoundsProps {
   fitBounds?: boolean;
   animationKey?: unknown;
   openPopup?: boolean;
+  maxZoom?: number;
 }
+
+/** Zoom level applied when flying to a single marker (mirrors the previous hardcoded behavior) */
+const SINGLE_MARKER_ZOOM = 14;
 
 const serializeKey = (key: unknown): string => {
   if (isString(key) || isNumber(key)) {
@@ -68,6 +72,7 @@ const extractCoordsFromFeatures = (input?: FeatureCollection<Geometry> | Feature
  * - `features`: GeoJSON data (Feature, FeatureCollection, or array of Features).
  * - `padding`: padding (px) around fitted bounds (default: 50).
  * - `duration`: animation duration in ms (default: 1000).
+ * - `maxZoom`: maximum zoom level applied when fitting bounds; also caps the single-marker zoom (default: 14).
  * - `disableAnimation`: disables map animations when true.
  * - `fitBounds`: whether bounds fitting is enabled.
  * - `animationKey`: dependency key to control when to re-run fitting logic.
@@ -88,6 +93,7 @@ const FitBounds = ({
   fitBounds = true,
   animationKey,
   openPopup,
+  maxZoom,
 }: FitBoundsProps) => {
   const { current: map } = useMap();
   const previousKey = useRef<string>("");
@@ -162,7 +168,7 @@ const FitBounds = ({
       map.flyTo({
         center: [lng, lat],
         duration: disableAnimation ? 0 : duration,
-        zoom: 14,
+        zoom: Math.min(SINGLE_MARKER_ZOOM, maxZoom ?? SINGLE_MARKER_ZOOM),
       });
       return;
     }
@@ -170,9 +176,10 @@ const FitBounds = ({
     // Fit all bounds with padding and optional animation
     map.fitBounds([bounds.getSouthWest().toArray(), bounds.getNorthEast().toArray()], {
       duration: disableAnimation ? 0 : duration,
+      maxZoom,
       padding,
     });
-  }, [map, bounds, padding, duration, disableAnimation, animationKey, fitBounds, validMarkers, featureCoords, openPopup]);
+  }, [map, bounds, padding, duration, disableAnimation, animationKey, fitBounds, validMarkers, featureCoords, openPopup, maxZoom]);
 
   return null;
 };

@@ -1,6 +1,6 @@
+import { Accordion, AccordionDetails, AccordionSummary, Box, Divider, Paper, Typography } from "@getsoren/design-system";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Button, Chip, FormControl, InputLabel, MenuItem, Select, Stack, TextField } from "@mui/material";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Divider, Paper, Typography } from "@getsoren/design-system";
 import { useMemo, useState } from "react";
 import { PropsGroup, PropsItem, propsData } from "sandbox/features/LandingPage/apiProps";
 

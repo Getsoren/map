@@ -1,6 +1,6 @@
+import { Box, IconButton, Typography } from "@getsoren/design-system";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Box, IconButton, Typography } from "@getsoren/design-system";
 import type { ReactNode } from "react";
 import { useState } from "react";
 

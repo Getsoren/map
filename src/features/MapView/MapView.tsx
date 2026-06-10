@@ -81,6 +81,7 @@ const MapView = ({
   markers = [],
   fitBounds = true,
   fitBoundsPadding,
+  fitBoundsMaxZoom,
   fitBoundDuration,
   fitBoundsAnimationKey,
   disableAnimation,
@@ -315,6 +316,7 @@ const MapView = ({
               markers={markers}
               features={features}
               padding={fitBoundsPadding}
+              maxZoom={fitBoundsMaxZoom}
               duration={disableAnimation ? 0 : fitBoundDuration}
               animationKey={fitBoundsAnimationKey}
               openPopup={!!openPopup}

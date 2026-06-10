@@ -1,6 +1,6 @@
+import { Box, Button, keyframes, Paper, Typography } from "@getsoren/design-system";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
-import { Box, Button, keyframes, Paper, Typography } from "@getsoren/design-system";
 import packageJson from "../../../package.json";
 
 // --- Subtle shimmer for the title ---

@@ -121,6 +121,9 @@ export interface MapViewProps {
   /** Padding used when applying fitBounds */
   fitBoundsPadding?: number;
 
+  /** Maximum zoom level applied when fitting bounds; also caps the zoom used when flying to a single marker (default: 14) */
+  fitBoundsMaxZoom?: number;
+
   /** Initial map center: [lng, lat] */
   center?: LngLatLike | number[];
 

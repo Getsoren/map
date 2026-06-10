@@ -30,8 +30,8 @@ export default defineConfig({
       external: [...Object.keys(dependencies), ...Object.keys(peerDependencies), "react/jsx-runtime", "react/jsx-dev-runtime"],
       output: {
         globals: {
-          "@mui/x-license": "muiXLicense",
           "@getsoren/design-system": "designSystem",
+          "@mui/x-license": "muiXLicense",
           "mapbox-gl": "mapboxgl",
           react: "React",
           "react-dom": "ReactDOM",

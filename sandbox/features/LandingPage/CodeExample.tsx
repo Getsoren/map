@@ -1,6 +1,6 @@
+import { Accordion, AccordionDetails, AccordionSummary, Box, IconButton, Paper, Stack, Tooltip, Typography } from "@getsoren/design-system";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Accordion, AccordionDetails, AccordionSummary, Box, IconButton, Paper, Stack, Tooltip, Typography } from "@getsoren/design-system";
 import type { PrismTheme } from "prism-react-renderer";
 import { Highlight } from "prism-react-renderer";
 import { useState } from "react";

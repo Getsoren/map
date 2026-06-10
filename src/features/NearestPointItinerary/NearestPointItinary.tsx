@@ -43,7 +43,9 @@ const NearestPointItinerary = ({
     const controller = new AbortController();
 
     // Skip fetching if parent already provided results
-    if (initialNearestResults?.length) return;
+    if (initialNearestResults?.length) {
+      return;
+    }
 
     // Defensive checks
     if (!origin || origin.length !== 2 || !destinations?.length) {
