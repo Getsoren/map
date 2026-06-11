@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.11.0](https://github.com/getsoren/map/compare/1.10.0...1.11.0) (2026-06-11)
+
+
+### ✨ Features
+
+* add mode prop to Markers for theme-aware color handling ([becdd72](https://github.com/getsoren/map/commit/becdd7295643e9a25336c13d86a7f6fdc502b478))
+* restore @mui/icons-material dependency in package.json and bun.lock ([a31e6e3](https://github.com/getsoren/map/commit/a31e6e3b45adf28c53527485fdf2e0ece488a2ad))
+* update @mui/icons-material to version 7.3.11 and enhance MapView styles ([083ed84](https://github.com/getsoren/map/commit/083ed849bcbcda1a1bd3bca8d4fd7da711adf6f6))
+
 ## [1.10.0](https://github.com/getsoren/map/compare/1.9.1...1.10.0) (2026-06-10)
 
 
