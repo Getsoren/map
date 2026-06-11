@@ -229,7 +229,13 @@ const MapView = ({
               })();
 
               const defaultMarker = marker.IconComponent ? null : (
-                <Markers color={marker.color} variant={marker.variant} size={size} type={marker.type} />
+                <Markers
+                  color={marker.color}
+                  variant={marker.variant}
+                  size={size}
+                  type={marker.type}
+                  mode={themeOverride ?? theme.palette.mode}
+                />
               );
 
               const wrapperStyle: CSSProperties = {

@@ -91,19 +91,16 @@ const MarkersExample = () => {
   const [baseMapView, setBaseMapView] = useState<"street" | "satellite">("street");
   const [cooperativeGestures, setCooperativeGestures] = useState(true);
   const [doubleClickZoom, setDoubleClickZoom] = useState(true);
-  const [projection, setProjection] = useState<ProjectionSpecification>({
-    name: "mercator",
-  });
+  const [projection, setProjection] = useState<ProjectionSpecification>({ name: "mercator" });
   const [visibleMarkerCount, setVisibleMarkerCount] = useState(DEFAULT_MARKERS);
   const [openPopupId, setOpenPopupId] = useState<string>("");
   const [openPopupOnHover, setOpenPopupOnHover] = useState(false);
   const [markerVariant, setMarkerVariant] = useState<VariantMarker>("default");
+  const markers = useMemo(() => generateMarkers(visibleMarkerCount, markerVariant), [visibleMarkerCount, markerVariant]);
 
   const handleMapClick = (lng: number, lat: number): void => {
     console.log("Map clicked at:", { lat, lng });
   };
-
-  const markers = useMemo(() => generateMarkers(visibleMarkerCount, markerVariant), [visibleMarkerCount, markerVariant]);
 
   return (
     <>
