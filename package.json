@@ -41,7 +41,7 @@
     "dist"
   ],
   "dependencies": {
-    "@mui/icons-material": "^5.17.1",
+    "@mui/icons-material": "^7.3.11",
     "@mui/x-license": "^8.6.0",
     "@getsoren/design-system": "^4.33.3",
     "@getsoren/react-utils": "^1.28.3",

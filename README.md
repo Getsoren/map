@@ -27,14 +27,14 @@ bun add @getsoren/map
 
 ## ⚙️ Requirements
 
-| Dependency | Version | Purpose |
-|------------|---------|---------|
-| `react` | 17+ / 18+ / 19+ | Core React runtime |
-| `react-dom` | 17+ / 18+ / 19+ | React DOM rendering |
-| `mapbox-gl` | ≥3.0.0 | Map rendering engine |
-| `@getsoren/design-system` | ≥4.0.0 | UI theming and components |
-| `@mui/icons-material` | * | Material UI icons |
-| `@mui/x-license` | * | MUI X license integration |
+| Dependency                | Version         | Purpose                   |
+|---------------------------|-----------------|---------------------------|
+| `react`                   | 17+ / 18+ / 19+ | Core React runtime        |
+| `react-dom`               | 17+ / 18+ / 19+ | React DOM rendering       |
+| `mapbox-gl`               | ≥3.0.0          | Map rendering engine      |
+| `@getsoren/design-system` | ≥4.0.0          | UI theming and components |
+| `@mui/icons-material`     | *               | Material UI icons         |
+| `@mui/x-license`          | *               | MUI X license integration |
 
 🪶 **You'll also need a Mapbox access token** to render maps. Get one at [mapbox.com](https://account.mapbox.com/access-tokens/).
 
@@ -144,67 +144,67 @@ Main map component that handles:
 
 #### Core Map Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `center` | `LngLatLike \| number[]` | `[2.3522, 48.8566]` | Initial map center coordinates [lng, lat] |
-| `zoom` | `number` | `5` | Initial zoom level (0-22) |
-| `width` | `string \| number` | `"100%"` | Map container width |
-| `height` | `string \| number` | `300` | Map container height |
-| `loading` | `boolean` | `false` | Show skeleton loader |
-| `square` | `boolean` | `false` | Enforce 1:1 aspect ratio |
-| `containerStyle` | `SxProps` | `undefined` | Custom MUI sx styles |
+| Prop             | Type                     | Default             | Description                               |
+|------------------|--------------------------|---------------------|-------------------------------------------|
+| `center`         | `LngLatLike \| number[]` | `[2.3522, 48.8566]` | Initial map center coordinates [lng, lat] |
+| `zoom`           | `number`                 | `5`                 | Initial zoom level (0-22)                 |
+| `width`          | `string \| number`       | `"100%"`            | Map container width                       |
+| `height`         | `string \| number`       | `300`               | Map container height                      |
+| `loading`        | `boolean`                | `false`             | Show skeleton loader                      |
+| `square`         | `boolean`                | `false`             | Enforce 1:1 aspect ratio                  |
+| `containerStyle` | `SxProps`                | `undefined`         | Custom MUI sx styles                      |
 
 #### Map Appearance
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `theme` | `"light" \| "dark"` | `"light"` | Map color theme |
-| `baseMapView` | `"street" \| "satellite"` | `"street"` | Base map layer type |
-| `mapStyle` | `string` | - | Custom Mapbox style URL |
-| `projection` | `ProjectionSpecification` | `"mercator"` | Map projection system |
+| Prop          | Type                      | Default      | Description             |
+|---------------|---------------------------|--------------|-------------------------|
+| `theme`       | `"light" \| "dark"`       | `"light"`    | Map color theme         |
+| `baseMapView` | `"street" \| "satellite"` | `"street"`   | Base map layer type     |
+| `mapStyle`    | `string`                  | -            | Custom Mapbox style URL |
+| `projection`  | `ProjectionSpecification` | `"mercator"` | Map projection system   |
 
 #### Interaction Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `cooperativeGestures` | `boolean` | `true` | Require modifier key for zoom/pan |
-| `doubleClickZoom` | `boolean` | `true` | Enable double-click to zoom |
-| `onMapClick` | `(lng, lat, marker?) => void` | - | Callback for map clicks (includes clicked marker if applicable) |
+| Prop                  | Type                          | Default | Description                                                     |
+|-----------------------|-------------------------------|---------|-----------------------------------------------------------------|
+| `cooperativeGestures` | `boolean`                     | `true`  | Require modifier key for zoom/pan                               |
+| `doubleClickZoom`     | `boolean`                     | `true`  | Enable double-click to zoom                                     |
+| `onMapClick`          | `(lng, lat, marker?) => void` | -       | Callback for map clicks (includes clicked marker if applicable) |
 
 #### Marker Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `markers` | `MarkerProps[]` | `[]` | Array of markers to display |
-| `markerImageURL` | `string` | - | Custom marker icon URL |
-| `openPopup` | `string \| number` | `undefined` | ID of marker with open popup |
-| `openPopupOnHover` | `boolean` | `false` | Open popups on hover instead of click |
-| `popupMaxWidth` | `string` | `"300px"` | Maximum popup width |
+| Prop               | Type               | Default     | Description                           |
+|--------------------|--------------------|-------------|---------------------------------------|
+| `markers`          | `MarkerProps[]`    | `[]`        | Array of markers to display           |
+| `markerImageURL`   | `string`           | -           | Custom marker icon URL                |
+| `openPopup`        | `string \| number` | `undefined` | ID of marker with open popup          |
+| `openPopupOnHover` | `boolean`          | `false`     | Open popups on hover instead of click |
+| `popupMaxWidth`    | `string`           | `"300px"`   | Maximum popup width                   |
 
 #### Bounds & Animation
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `fitBounds` | `boolean` | `true` | Auto-fit map to show all markers |
-| `fitBoundsPadding` | `number` | `0` | Padding (px) around fitted bounds |
-| `fitBoundDuration` | `number` | `500` | Animation duration (ms) |
-| `disableAnimation` | `boolean` | `false` | Disable all animations |
-| `fitBoundsAnimationKey` | `unknown` | - | Change to re-trigger fit bounds |
+| Prop                    | Type      | Default | Description                       |
+|-------------------------|-----------|---------|-----------------------------------|
+| `fitBounds`             | `boolean` | `true`  | Auto-fit map to show all markers  |
+| `fitBoundsPadding`      | `number`  | `0`     | Padding (px) around fitted bounds |
+| `fitBoundDuration`      | `number`  | `500`   | Animation duration (ms)           |
+| `disableAnimation`      | `boolean` | `false` | Disable all animations            |
+| `fitBoundsAnimationKey` | `unknown` | -       | Change to re-trigger fit bounds   |
 
 ---
 
 ### Marker Props (`MarkerProps`)
 
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| `id` | `string \| number` | ✅ | Unique marker identifier |
-| `lng` | `number` | ✅ | Longitude coordinate |
-| `lat` | `number` | ✅ | Latitude coordinate |
-| `Tooltip` | `ReactNode` | - | Content for popup/tooltip |
-| `IconComponent` | `React.ComponentType` | - | Custom React icon component |
-| `iconProps` | `object` | - | Props passed to IconComponent |
-| `color` | `string` | - | Marker color (MUI palette) |
-| `variant` | `string` | - | Marker style variant |
+| Prop            | Type                  | Required | Description                   |
+|-----------------|-----------------------|----------|-------------------------------|
+| `id`            | `string \| number`    | ✅        | Unique marker identifier      |
+| `lng`           | `number`              | ✅        | Longitude coordinate          |
+| `lat`           | `number`              | ✅        | Latitude coordinate           |
+| `Tooltip`       | `ReactNode`           | -        | Content for popup/tooltip     |
+| `IconComponent` | `React.ComponentType` | -        | Custom React icon component   |
+| `iconProps`     | `object`              | -        | Props passed to IconComponent |
+| `color`         | `string`              | -        | Marker color (MUI palette)    |
+| `variant`       | `string`              | -        | Marker style variant          |
 
 **Example with custom icon:**
 ```tsx
@@ -226,16 +226,16 @@ const marker = {
 
 Draw a route between two points with customizable styling and routing engines.
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `from` | `[number, number]` | - | Route starting point [lng, lat] |
-| `to` | `[number, number]` | - | Route ending point [lng, lat] |
-| `profile` | `"driving" \| "walking" \| "cycling"` | `"driving"` | Transportation mode |
-| `engine` | `"OSRM" \| "Mapbox"` | `"OSRM"` | Routing service to use |
-| `itineraryLineStyle` | `Partial<ItineraryLineStyle>` | `{ color: "#3b82f6", width: 4, opacity: 0.8 }` | Route line appearance |
-| `initialRoute` | `Feature<LineString>` | - | Precomputed GeoJSON route |
-| `onRouteComputed` | `(route) => void` | - | Callback fired when route is computed |
-| `itineraryLabel` | `ReactNode` | - | Label displayed along the route (e.g., "12 min") |
+| Prop                 | Type                                  | Default                                        | Description                                      |
+|----------------------|---------------------------------------|------------------------------------------------|--------------------------------------------------|
+| `from`               | `[number, number]`                    | -                                              | Route starting point [lng, lat]                  |
+| `to`                 | `[number, number]`                    | -                                              | Route ending point [lng, lat]                    |
+| `profile`            | `"driving" \| "walking" \| "cycling"` | `"driving"`                                    | Transportation mode                              |
+| `engine`             | `"OSRM" \| "Mapbox"`                  | `"OSRM"`                                       | Routing service to use                           |
+| `itineraryLineStyle` | `Partial<ItineraryLineStyle>`         | `{ color: "#3b82f6", width: 4, opacity: 0.8 }` | Route line appearance                            |
+| `initialRoute`       | `Feature<LineString>`                 | -                                              | Precomputed GeoJSON route                        |
+| `onRouteComputed`    | `(route) => void`                     | -                                              | Callback fired when route is computed            |
+| `itineraryLabel`     | `ReactNode`                           | -                                              | Label displayed along the route (e.g., "12 min") |
 
 **Example:**
 ```tsx
@@ -264,16 +264,16 @@ Draw a route between two points with customizable styling and routing engines.
 
 Find and highlight the closest marker to a given point within a maximum distance.
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `origin` | `[number, number]` | - | Starting point for search [lng, lat] |
-| `destinations` | `Array<{id, lng, lat}>` | - | Candidate destinations |
-| `maxDistanceMeters` | `number` | - | Maximum search radius in meters |
-| `profile` | `"driving" \| "walking" \| "cycling"` | `"driving"` | Routing profile for distance calculation |
-| `engine` | `"OSRM" \| "Mapbox"` | `"OSRM"` | Routing engine to use |
-| `onNearestFound` | `(results) => void` | - | Callback with all nearest results |
-| `initialNearestResults` | `NearestResult[]` | - | Precomputed nearest results |
-| `itineraryLineStyle` | `Partial<ItineraryLineStyle>` | - | Style override for auto-generated itinerary |
+| Prop                    | Type                                  | Default     | Description                                 |
+|-------------------------|---------------------------------------|-------------|---------------------------------------------|
+| `origin`                | `[number, number]`                    | -           | Starting point for search [lng, lat]        |
+| `destinations`          | `Array<{id, lng, lat}>`               | -           | Candidate destinations                      |
+| `maxDistanceMeters`     | `number`                              | -           | Maximum search radius in meters             |
+| `profile`               | `"driving" \| "walking" \| "cycling"` | `"driving"` | Routing profile for distance calculation    |
+| `engine`                | `"OSRM" \| "Mapbox"`                  | `"OSRM"`    | Routing engine to use                       |
+| `onNearestFound`        | `(results) => void`                   | -           | Callback with all nearest results           |
+| `initialNearestResults` | `NearestResult[]`                     | -           | Precomputed nearest results                 |
+| `itineraryLineStyle`    | `Partial<ItineraryLineStyle>`         | -           | Style override for auto-generated itinerary |
 
 **NearestResult Type:**
 ```tsx
@@ -314,12 +314,12 @@ interface NearestResult {
 
 Compute and display areas reachable within specific time intervals.
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `origin` | `[number, number]` | - | Center point for isochrone [lng, lat] |
-| `profile` | `"driving" \| "walking" \| "cycling"` | `"driving"` | Transportation mode |
-| `intervals` | `number[]` | `[5, 10, 15]` | Time intervals in minutes |
-| `onIsochroneLoaded` | `(data) => void` | - | Callback with GeoJSON result |
+| Prop                | Type                                  | Default       | Description                           |
+|---------------------|---------------------------------------|---------------|---------------------------------------|
+| `origin`            | `[number, number]`                    | -             | Center point for isochrone [lng, lat] |
+| `profile`           | `"driving" \| "walking" \| "cycling"` | `"driving"`   | Transportation mode                   |
+| `intervals`         | `number[]`                            | `[5, 10, 15]` | Time intervals in minutes             |
+| `onIsochroneLoaded` | `(data) => void`                      | -             | Callback with GeoJSON result          |
 
 **Example:**
 ```tsx
@@ -341,8 +341,8 @@ Compute and display areas reachable within specific time intervals.
 
 Display custom vector features like polygons, lines, or points.
 
-| Prop | Type | Description |
-|------|------|-------------|
+| Prop       | Type                                        | Description            |
+|------------|---------------------------------------------|------------------------|
 | `features` | `Feature \| Feature[] \| FeatureCollection` | GeoJSON data to render |
 
 **Example:**
@@ -592,18 +592,18 @@ bun run dev:sandbox
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `bun run sandbox` | Start interactive development playground |
-| `bun run build` | Build library for production |
-| `bun run build:sandbox` | Build sandbox demo site |
-| `bun run deploy:sandbox` | Deploy sandbox to GitHub Pages |
-| `bun run lint` | Check code quality and types |
-| `bun run lint:fix` | Auto-fix linting issues |
-| `bun run test` | Run test suite |
-| `bun run test:watch` | Run tests in watch mode |
-| `bun run version` | Bump version with changelog |
-| `bun run release` | Build and publish to npm |
+| Command                  | Description                              |
+|--------------------------|------------------------------------------|
+| `bun run sandbox`        | Start interactive development playground |
+| `bun run build`          | Build library for production             |
+| `bun run build:sandbox`  | Build sandbox demo site                  |
+| `bun run deploy:sandbox` | Deploy sandbox to GitHub Pages           |
+| `bun run lint`           | Check code quality and types             |
+| `bun run lint:fix`       | Auto-fix linting issues                  |
+| `bun run test`           | Run test suite                           |
+| `bun run test:watch`     | Run tests in watch mode                  |
+| `bun run version`        | Bump version with changelog              |
+| `bun run release`        | Build and publish to npm                 |
 
 ### Project Structure
 ```
