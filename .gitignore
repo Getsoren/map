@@ -27,5 +27,6 @@ dist-example
 dist-sandbox
 
 tsconfig.tsbuildinfo
+/tsconfig.node.tsbuildinfo
 /CLAUDE.md
 .npmrc
