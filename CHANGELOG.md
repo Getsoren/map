@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.11.1](https://github.com/getsoren/map/compare/1.11.0...1.11.1) (2026-11-04)
+
+
+### 🐛 Fixes
+
+* pin Biome 2.4.15 and install with a frozen lockfile so the release lint matches the shared config ([c6908f9](https://github.com/getsoren/map/commit/c6908f9da9a7a13601cf90fd008ab494e8580d8f))
+* run the lint scripts with the installed Biome binary instead of bunx so CI uses the shared config's version ([c8e98a2](https://github.com/getsoren/map/commit/c8e98a219ef537518ec7ff7d61c1c3e4abc93caf))
+
 ## [1.11.0](https://github.com/getsoren/map/compare/1.10.0...1.11.0) (2026-06-11)
 
 
