@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.11.2](https://github.com/getsoren/map/compare/1.11.1...1.11.2) (2026-11-09)
+
+
+### 🐛 Fixes
+
+* honour object formats of the MapView center prop ([8d62eaa](https://github.com/getsoren/map/commit/8d62eaac3434685105c6f0786366c3e12f8b4c59))
+
 ## [1.11.1](https://github.com/getsoren/map/compare/1.11.0...1.11.1) (2026-11-04)
 
 
