@@ -2,7 +2,7 @@ import { Box, GlobalStyles, Skeleton, useTheme } from "@getsoren/design-system";
 import { CSSProperties, memo, ReactElement, useEffect, useMemo, useRef, useState } from "react";
 import MapboxMap, { MapRef, Marker, Popup } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { isArray, isNumber } from "@getsoren/react-utils";
+import { isNumber } from "@getsoren/react-utils";
 import FeatureCollection from "@/components/FeatureCollection/FeatureCollection";
 import EmptyState from "@/components/Layout/EmptyState";
 import Markers from "@/components/Markers/Markers";
@@ -15,6 +15,7 @@ import PopupContent from "@/features/PopupContent/PopupContent";
 import isValidMarker from "@/types/isValidMarker";
 import { MapViewProps } from "@/types/MapViewProps";
 import getCoreMapOptions, { getBaseMapStyle } from "@/utils/getCoreMapOptions";
+import { resolveMapCenter } from "@/utils/resolveMapCenter";
 
 /**
  * MapView
@@ -73,7 +74,7 @@ const MapView = ({
   loading,
   height = 300,
   width = "100%",
-  center = [2.3522, 48.8566],
+  center,
   zoom = 5,
   popupMaxWidth,
   openPopup,
@@ -105,10 +106,7 @@ const MapView = ({
   const [mapLoaded, setMapLoaded] = useState(false);
   const [error, setError] = useState(false);
 
-  const initialCenter = useMemo(() => {
-    const [lng = 2.3522, lat = 48.8566] = isArray(center) ? center : [];
-    return { latitude: lat, longitude: lng, zoom };
-  }, [center, zoom]);
+  const initialCenter = useMemo(() => ({ ...resolveMapCenter(center), zoom }), [center, zoom]);
 
   const mapStyle = useMemo(
     () => baseMapStyle || getBaseMapStyle(baseMapView, themeOverride ?? theme.palette.mode),

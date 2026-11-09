@@ -124,7 +124,7 @@ export interface MapViewProps {
   /** Maximum zoom level applied when fitting bounds; also caps the zoom used when flying to a single marker (default: 14) */
   fitBoundsMaxZoom?: number;
 
-  /** Initial map center: [lng, lat] */
+  /** Initial map center: [lng, lat] or a { lng, lat } object */
   center?: LngLatLike | number[];
 
   /** Mapbox style URL or ID */

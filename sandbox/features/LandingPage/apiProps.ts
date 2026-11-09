@@ -24,7 +24,7 @@ export const propsData: PropsGroup[] = [
     items: [
       {
         default: "[2.3522, 48.8566]",
-        description: "Initial map center coordinates in [lng, lat] format.",
+        description: "Initial map center coordinates, as [lng, lat] or a { lng, lat } object.",
         prop: "center",
         type: "LngLatLike | number[]",
       },
